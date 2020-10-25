@@ -1,0 +1,235 @@
+body{
+	background-color: #E8E9EB;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+}
+.logo{
+	
+	text-align: center;
+}
+.logo img{
+	display:inline-block;
+}
+.meni{
+	max-width:700px;
+	background-color: #333333;
+	margin:auto;
+	padding-top:20px;
+	margin-top:-50px;
+	
+}
+ul{
+  list-style: none;
+  margin-top: 15px; 
+  
+  background: #333333;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+}
+
+ul a {
+  display: block;
+  max-width:700px;
+  padding: 1em;
+  color: white;
+}
+a#aktivni{
+	text-decoration: none;
+}
+.sadrzaj{
+	margin:auto;
+	width:700px;
+	background-color: #333333;
+	height: auto;
+	margin-top:10px;
+}
+
+form{
+	padding:3%;
+}
+.centriraj{
+	padding:3px;
+	width:700px;
+	height:auto;
+	margin-left: 150px;
+}
+.labela{ 
+	width:25%;
+	color:white;
+	float:left;
+}
+.input{
+  float: left;
+  width: 75%;
+  margin-bottom:2%;
+  margin-top: -3px;
+  height:30px;
+}
+
+#ch{
+	color: white;
+	margin-left: 45%;
+}
+form{
+	color:white;
+}
+#vrijeme{
+	margin-top: 2%;
+	padding: 0.0000000005%;
+	margin-left:20%;
+}
+.kalendar{
+	margin-top:2%;
+	margin-right: 7%;
+	margin-left:7%; 
+	border:2px solid white;
+}
+table, th, tr{
+	border:1px solid white;
+	margin-top: 3%;
+	margin-left: 20%;
+	padding-right:2px;
+	color:white;
+	text-align:center;
+}
+tr{
+	margin-top:5px;
+}
+th{
+	padding:2%;
+}
+.dan{
+	text-align-last: center;
+}
+table{
+	border:1px solid white;
+	color:white;
+
+	border-spacing:1.098vw;
+}
+.novembar{
+	border-style: hidden;
+	text-align:left;
+}
+td.broj{
+	height:40px;
+	border:1px solid white;
+	margin-bottom: 2px;
+	white-space: nowrap;
+}
+td div.slobodna{
+	background-color: green;
+	height:20px;
+}
+td div.zauzeta{
+	background-color: red;
+	height:20px;
+}
+button{
+	height:30px;
+	width:100px;
+	margin-bottom:5px;
+	text-align: center;
+	border-radius: 15px;
+	border-style: hidden;
+	background-color:rgb(202, 196, 196);
+}
+.dugmad{
+	width:700px;
+	margin-top:10px;
+	text-align:center;
+}
+.prethodni{
+	margin-right:25%;
+}
+
+
+
+@media all and (max-width: 600px) {
+	ul {
+	  -webkit-flex-flow: column wrap;
+	  flex-flow: column wrap;
+	  padding: 0;
+	}
+	
+	ul a { 
+	  text-align: center; 
+	  padding: 10px;
+	  border-top: 1px solid rgba(255,255,255,0.3); 
+	  border-bottom: 1px solid rgba(0,0,0,0.1); 
+	}
+  
+	ul li:last-of-type a {
+	  border-bottom: none;
+	}
+  }
+  @media only screen and (max-width: 600px) {
+	.labela, .input{
+	  width: 100%;
+	  margin-top:5px;
+	  margin-left:-55px;
+	}
+	.sadrzaj{
+		width:auto;
+		height:auto;
+	}
+	.prethodni,.sljedeci{
+		width:15%;
+		display:block;
+		height:30px;
+		margin-left:18%;
+	}
+	.labela{
+		text-align:left;
+	}
+	table{
+		display:flex;
+		width:25%;
+		margin-left:25%;
+		table-layout:fixed;
+		height:35%;
+	}
+	.prikazi1{
+		display:block;
+		padding:5px;
+		border:none;
+		margin-top:-5px;
+		margin-left:-100px;
+	}
+	.prikazi1 th{
+		display:block;
+		width:40px;
+		height:30px;
+		margin-left:100px;
+		text-align:center;
+	}
+	.sadrzaj{
+		height:1000px;
+	}
+	.prikazi2{
+		margin-top:-298px;
+		margin-left:50%;
+		display:block;
+		border:none;
+		
+		width:50%;
+	}
+	.prikazi2 td{
+		display:block;
+		/*height:5%;*/
+		height:30px;
+		width:40px;
+		padding-bottom:10px;
+		margin-left:30px;
+	}
+
+	.sakrij{
+		display:none;
+	}
+	
+  }

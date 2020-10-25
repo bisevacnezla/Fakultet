@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/sale.css">
+	<script src="js/jquery-1.12.4.js"></script>
+    <script src="js/Pozivi.js"></script>
+	<style>
+
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+
+<body>
+
+	<div class="logo">
+		<img src="slike/logo.jpg" alt="logo1" class="logo">
+	</div>
+
+
+	<div class="glavni">
+		<div class="meni">
+			<ul>
+				<li><a href="pocetna.html">Početna</a></li>
+				<li><a href="sale.html">Sale</a></li>
+				<li><a href="unos.html">Unos</a></li>
+				<li><a href="rezervacija.html">Rezervacije</a></li>
+				<li><a href="#" id="aktivni">Osobe</a></li>
+			</ul>
+		</div>
+	</div>
+
+
+	<div class="sadrzaj" style="background-color: white; width: 700px;">
+		<table style="margin: auto; width: 600px;">
+		  <tr>
+		  	<th>#</th>
+		    <th>Osoblje</th>
+		    <th>Naziv sale</th>
+		  </tr>
+		  <% for (let i=0; i<data.length; i++) {%>
+		  <tr>
+		  	<td><%= i+1 %></td>
+		    <td><%= data[i].ime_osobe %> <%= data[i].prezime_osobe %></td>
+		    <td><%= data[i].ime_sale %></td>
+		  </tr>
+		  <% } %>
+
+		</table>
+
+	</div>
+	<div class="sadrzaj" style="background-color: white; width: 700px;">
+		<table style="margin: auto; width: 600px;">
+		  <tr>
+		  	<th>#</th>
+		    <th>Osoblje</th>
+		    <th>Kancelarija</th>
+		  </tr>
+		  <% for (let i=0; i<data1.length; i++) {%>
+		  <tr>
+		  	<td><%= i+1 %></td>
+		    <td><%= data1[i].ime_osobe %> <%= data[i].prezime_osobe %></td>
+		    <td><%= data1[i].kancelarija %></td>
+		  </tr>
+		  <% } %>
+
+		</table>
+
+	</div>
+
+	</div>
+
+</body>
+
+</html>

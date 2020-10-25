@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="css/unos.css">
+	<link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+</head>
+
+<body>
+	<div class="logo">
+		<img src="slike/logo.jpg" alt="logo1" class="logo">
+	</div>
+
+	<div class="glavni">
+		<div class="meni">
+			<ul>
+				<li><a href="pocetna.html">Početna</a></li>
+				<li><a href="sale.html">Sale</a></li>
+				<li><a href="#" id="aktivni">Unos</a></li>
+				<li><a href="rezervacija.html">Rezervacije</a></li>
+				<li><a href="/osobe">Osobe</a></li>
+			</ul>
+		</div>
+	</div>
+
+	<div class="sadrzaj">
+		<form action="/action_page.php">
+			<div class="row">
+				<div class="labela">
+					<label for="naziv">Naziv:</label>
+				</div>
+				<div class="input">
+					<input type="text" name="naziv" placeholder="Unesite naziv">
+				</div>
+			</div>
+			<div class="row">
+				<div class="labela">
+					<label for="brojMjesta">Broj Mjesta:</label>
+				</div>
+				<div class="input">
+					<input type="number" name="brojMjesta" placeholder="Unesite broj mjesta">
+				</div>
+			</div>
+			<div class="row">
+				<div class="labela">
+					<label for="odgovornaOsoba">E-Mail:</label>
+				</div>
+				<div class="input">
+					<input type="email" name="odgovornaOsoba" placeholder="Unesite e-mail">
+				</div>
+			</div>
+			<div class="row">
+				<div class="labela">
+					<label for="sprat">Sprat:</label>
+				</div>
+				<div class="input">
+					<input type="text" name="sprat" placeholder="Unesite sprat">
+				</div>
+			</div>
+			<div class="row">
+				<input type="submit" class="submit" name="unos" value="Submit">
+			</div>
+		</form>
+	</div>
+</body>
+
+</html>

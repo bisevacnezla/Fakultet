@@ -1,0 +1,276 @@
+<!--<!DOCTYPE html>-->
+<html>
+
+<head>
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/rezervacija.css">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro&display=swap" rel="stylesheet">
+    <script src="js/jquery-1.12.4.js"></script>
+    <script src="js/Pozivi.js"></script>
+    <script src="js/kalendar.js"></script>
+    <!-- <script src="js/kalendarUtils.js"></script> -->
+    <script src="js/Rezervacije.js"></script>
+    <!--<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>-->
+
+</head>
+
+<body>
+    <div class="logo">
+        <img src="slike/logo.jpg" alt="logo1" class="logo">
+    </div>
+
+    <div class="glavni">
+        <div class="meni">
+            <ul>
+                <li><a href="pocetna.html">Početna</a></li>
+                <li><a href="sale.html">Sale</a></li>
+                <li><a href="unos.html">Unos</a></li>
+                <li><a href="#" id="aktivni">Rezervacije</a></li>
+                <li><a href="/osobe">Osobe</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="sadrzaj" onload="windowOnLoad()">
+        <div class="centriraj">
+            <form action="/action_page.php">
+                <div class="row">
+                    <div class="labela">
+                        <label for="odabirSale">Naziv:</label>
+                    </div>
+                    <div class="input">
+                    <select name="sala" class="sala" id="sala" onchange="updateuj()">
+                            <option value="">Odaberite salu</option>
+                            
+                    </select>
+                    <!--    <select name="sala" class="sala" id="sala" onchange="updateuj()">
+							<option value="VA1">VA1</option>
+							<option value="VA2">VA2</option>
+							<option value="MA">MA</option>
+							<option value="EE1">EE1</option>
+							<option value="EE2">EE2</option>
+						</select>-->
+                    </div>
+                   
+                </div>
+                <div class="row">
+                    <div class="labela">
+                        <label for="rezervacija">Da li je rezervacija periodična? </label>
+                    </div>
+                    <div class="input">
+                        <input type="checkbox" name="ch1" id="periodicnaCheck" value="Da" onchange="updateuj()">Da
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="labela">
+                        <label for="vrijeme">Postavite vrijeme:</label>
+                    </div>
+                </div>
+                <div class="input">
+                    <input type="time" name="pocetak" id="vrijeme1" onchange="updateuj()">
+                    <input type="time" name="kraj" id="vrijeme2" onchange="updateuj()">
+                </div>
+
+            </form>
+
+            <p style="color: white">Odaberite osoblje </p>
+            <div class="container" style="width:600px;">
+   
+               <select name="osoblje" id="osoblje" class="form-control input-lg">
+                <option value="">Odaberite osoblje</option>
+               </select>
+   
+            </div>
+                <!--<div class="input">
+                    <select name="osoblje" class="osoblje" id="osoblje">
+                        <option value="">Odaberite osoblje</option>
+                            
+                        <!-<option value="VA1">Osoblje 1</option>
+                        <option value="VA2">Osoblje 2</option>-
+                        
+                    </select>
+                </div>-->
+        </div>
+        <table id="tabela">
+            <tr class="novembar">
+                <th colspan="7" class="novembar">Novembar</th>
+            </tr>
+            <tr class="prikazi1">
+                <th class="dan">PON</th>
+                <th class="dan">UTO</th>
+                <th class="dan">SRI</th>
+                <th class="dan">ČET</th>
+                <th class="dan">PET</th>
+                <th class="dan">SUB</th>
+                <th class="dan">NED</th>
+            </tr>
+            <tr class="prikazi2">
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td class="broj">1
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">2
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">3
+                    <div class="slobodna"></div>
+                </td>
+            </tr>
+            <tr class="sakrij">
+                <td class="broj">4
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">5
+                    <div class="zauzeta"></div>
+                </td>
+                <td class="broj">6
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">7
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">8
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">9
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">10
+                    <div class="slobodna"></div>
+                </td>
+            </tr>
+            <tr class="sakrij">
+                <td class="broj">11
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">12
+                    <div class="zauzeta"></div>
+                </td>
+                <td class="broj">13
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">14
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">15
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">16
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">17
+                    <div class="slobodna"></div>
+                </td>
+            </tr>
+            <tr class="sakrij">
+                <td class="broj">18
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">19
+                    <div class="zauzeta"></div>
+                </td>
+                <td class="broj">20
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">21
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">22
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">23
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">24
+                    <div class="slobodna"></div>
+                </td>
+            </tr>
+            <tr class="sakrij">
+                <td class="broj">25
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">26
+                    <div class="zauzeta"></div>
+                </td>
+                <td class="broj">27
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">28
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">29
+                    <div class="slobodna"></div>
+                </td>
+                <td class="broj">30
+                    <div class="slobodna"></div>
+                </td>
+            </tr>
+        </table>
+        <div class="dugmad">
+            <button class="prethodni" id="prethodni" onclick="prethodniMjesec()">Prethodni</button>
+            <button class="sljedeci" id="sljedeci" onclick="sljedeciMjesec()">Sljedeci</button>
+        </div>
+    </div>
+
+
+ <script>
+
+ /*$(document).ready(function(){
+
+ load_json_data('country');
+
+ function load_json_data(id, parent_id)
+ {
+  var html_code = '';
+  $.getJSON('nekipodaci.json', function(data){
+
+   html_code += '<option value="">Select '+id+'</option>';
+   $.each(data, function(key, value){
+    //console.log("Key ", key);
+    html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+    /*if(id == 'country')
+    {
+     if(value.parent_id == '0')
+     {
+      html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+     }
+    }
+    else
+    {
+     if(value.parent_id == parent_id)
+     {
+      html_code += '<option value="'+value.id+'">'+value.name+'</option>';
+     }
+    }*/
+  /* });
+   $('#'+id).html(html_code);
+  });
+
+ }
+
+ 
+
+ $(document).on('change', '#country', function(){
+  var country_id = $(this).val();
+  if(country_id != '')
+  {
+   load_json_data('state', country_id);
+  }
+  else
+  {
+   //$('#state').html('<option value="">Select state</option>');
+   //$('#city').html('<option value="">Select city</option>');
+  }
+ });
+ 
+}); */
+</script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,126 @@
+body{
+	background-color: #E8E9EB;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 15px;
+}
+.logo{
+	
+	text-align: center;
+}
+.logo img{
+	display:inline-block;
+}
+.meni{
+	max-width:700px;
+	background-color: #333333;
+	margin:auto;
+	padding-top:20px;
+	margin-top:-50px;
+	
+}
+ul{
+  list-style: none;
+  margin-top: 15px; 
+  
+  background: #333333;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+}
+
+ul a {
+  display: block;
+  max-width:700px;
+  padding: 1em;
+  color: white;
+}
+a#aktivni{
+	text-decoration:none;
+}
+table {
+  border-collapse: collapse;
+  margin-left:25%;
+}
+th {
+  border:2px solid #d3d3d3;
+}
+tr{
+  width:50px;
+}
+#nista {
+  border: none;
+}
+.sala, .zauzetaSala, .slobodnaSala{
+  width:50px;
+  height:20px;
+  background-color: white;
+  padding-bottom: 10px;
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 5px;
+
+}
+.zauzetaSala{
+	background-color: rgb(167, 101, 92);
+}
+.slobodnaSala{
+	background-color: rgb(122, 192, 116);
+}
+.headerSprat{
+	padding-top:10px;
+	padding-bottom:10px;
+	text-align: right;
+	padding-right: 10px;
+	/*padding-left: 10px;*/
+	background-color: #595958;
+}
+.headerRedni{
+	padding-top:20px;
+	height:50%;
+	text-align: left;
+	background-color: #66665f;
+}
+#spratic{
+	text-align:center;
+}
+.sadrzaj{
+	margin:auto;
+	max-width:700px;
+  	background-color: #333333;
+	height: auto;
+	margin-top:10px;
+}
+
+@media only screen and (max-width: 600px){
+  .headerSprat, .headerRedni{
+    display:none;
+  }
+
+}
+
+@media all and (max-width: 600px) {
+	ul {
+	  -webkit-flex-flow: column wrap;
+	  flex-flow: column wrap;
+	  padding: 0;
+	}
+	
+	ul a { 
+	  text-align: center; 
+	  padding: 10px;
+	  border-top: 1px solid rgba(255,255,255,0.3); 
+	  border-bottom: 1px solid rgba(0,0,0,0.1); 
+	}
+  
+	
+	ul li:last-of-type a {
+	  border-bottom: none;
+	}
+	.sadrzaj{
+		width:auto;
+	}
+  }
